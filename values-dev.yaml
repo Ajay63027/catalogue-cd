@@ -1,6 +1,6 @@
 deployment:
   imageURL: ajay630/catalogue
-  imageVersion: v1
+  imageVersion: IMAGE_VERSION
 hpa:
   maxReplicas: 10
   utilisation: 75
