@@ -1,5 +1,5 @@
 deployment:
-  imageURL: ajay630/catalogue
+  imageURL: <aws_account_id>.dkr.ecr.us-east-1.amazonaws.com/catalogue
   imageVersion: IMAGE_VERSION
 hpa:
   maxReplicas: 10
