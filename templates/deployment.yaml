@@ -24,11 +24,10 @@ spec:
         project: roboshop
         tier: app
     spec:
-      restartPolicy: Never
       containers:
       - name: catalogue
         image: "{{ .Values.deployment.imageURL}}:{{ .Values.deployment.imageVersion }}"
-       image: "{{ .Values.deployment.imageURL}}:{{ .Values.deployment.imageVersion }}"
+        image: "{{ .Values.deployment.imageURL}}:{{ .Values.deployment.imageVersion }}"
         command: ["sh", "-c"]
         args: ["echo 'failure' && sleep 3600"]   # keep container running
         readinessProbe:
