@@ -24,6 +24,7 @@ spec:
         project: roboshop
         tier: app
     spec:
+      restartPolicy: Never
       containers:
       - name: catalogue
         image: "{{ .Values.deployment.imageURL}}:{{ .Values.deployment.imageVersion }}"
