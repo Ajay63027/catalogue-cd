@@ -27,16 +27,7 @@ spec:
       containers:
       - name: catalogue
         image: "{{ .Values.deployment.imageURL}}:{{ .Values.deployment.imageVersion }}"
-        image: "{{ .Values.deployment.imageURL}}:{{ .Values.deployment.imageVersion }}"
-        command: ["sh", "-c"]
-        args: ["echo 'failure' && sleep 3600"]   # keep container running
-        readinessProbe:
-          httpGet:
-            path: /health   # 👈 endpoint that does NOT exist
-            port: 8080
-          initialDelaySeconds: 5
-          periodSeconds: 5
-          failureThreshold: 1
+        command: ["sh", "-c", "echo 'failure' && exit 1"]
         resources:
           requests:
             cpu: "50m"
