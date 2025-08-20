@@ -25,7 +25,7 @@ spec:
         tier: app
     spec:
       containers:
-      - name: catalogue
+      //- name: catalogue
         image: "{{ .Values.deployment.imageURL}}:{{ .Values.deployment.imageVersion }}"
         command: ["sh", "-c"]
         args: ["echo 'failure' && exit 1"]
